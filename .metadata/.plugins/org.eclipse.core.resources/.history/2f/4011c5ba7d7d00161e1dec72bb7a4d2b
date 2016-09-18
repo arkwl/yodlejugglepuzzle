@@ -1,0 +1,44 @@
+package yodlejuggler;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class JugglerParser {
+	
+	private ArrayList<Juggler> jugglers;
+	private Scanner in;
+	private int count;
+	
+	public JugglerParser(String filename) throws IOException{
+		jugglers = new ArrayList<Juggler>();
+		count = 0;
+		in = new Scanner(new File(filename));
+		while (in.hasNext()) {
+		    String line = in.nextLine();
+		    //if the line starts with J
+		    
+		    if((line.substring(0,1)).equals("J")){
+		    	count++;
+		    }
+		}
+
+		in.close();
+	}
+	
+	ArrayList<Juggler> getJugglers(){
+		if (jugglers.size() != 0){
+			return jugglers;
+		}
+		else{
+			return null;
+		}
+		
+	}
+	
+	public static void main(String args[]){
+		JugglerParser test = new JugglerParser();
+	}
+}
