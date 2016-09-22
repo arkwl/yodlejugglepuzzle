@@ -3,7 +3,6 @@ package yodlejuggler;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class CircuitParser {
@@ -46,20 +45,5 @@ public class CircuitParser {
 			return null;
 		}
 		
-	}
-	
-	public static void main(String args[]){
-		CircuitParser test = null;
-		try {
-			test = new CircuitParser("jugglefest.txt");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		ArrayList<Circuit> testArray = test.getCircuits();
-		for(int i = 0 ; i < testArray.size(); i++){
-			System.out.println(testArray.size());
-			System.out.println(testArray.get(i).h +" "+testArray.get(i).e +" "+testArray.get(i).p);
-		}
 	}
 }

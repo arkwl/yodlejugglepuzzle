@@ -59,7 +59,7 @@ public class CircuitParser {
 		ArrayList<Circuit> testArray = test.getCircuits();
 		for(int i = 0 ; i < testArray.size(); i++){
 			System.out.println(testArray.size());
-			System.out.println(testArray.get(i).h +" "+testArray.get(i).e +" "+testArray.get(i).p);
+			System.out.println(testArray.get(i).h);
 		}
 	}
 }
